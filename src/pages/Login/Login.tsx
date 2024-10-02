@@ -4,20 +4,16 @@ import { CustomTextField } from "../../components/CustomTextField";
 import { Link } from "react-router-dom";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { useAuth } from "../../contexts/AuthContext";
-
-interface IFormInput {
-  email: string;
-  password: string;
-}
+import { ILoginInput } from "../../types/interfaces";
 
 export const Login = () => {
   const {
     handleSubmit,
     control,
     formState: {},
-  } = useForm<IFormInput>();
+  } = useForm<ILoginInput>();
   const { loginAction } = useAuth();
-  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+  const onSubmit: SubmitHandler<ILoginInput> = async (data) => {
     console.log(data);
     await loginAction(data);
   };

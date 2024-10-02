@@ -3,7 +3,7 @@ import { Login } from "./pages/Login/Login";
 import { Home } from "./pages/Home/Home";
 import { AuthProvider } from "./contexts/AuthContext";
 import Layout from "./pages/Layout/Layout";
-import { SendMoney } from "./pages/SendMoney";
+import { SendMoney } from "./pages/SendMoney/SendMoney";
 import { LoadMoney } from "./pages/LoadMoney";
 import { TransactionHistory } from "./pages/TransactionHistory";
 

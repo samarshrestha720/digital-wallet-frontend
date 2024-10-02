@@ -31,7 +31,7 @@ const initalState = {
     balance: 100.12,
     email: "demo1@demo.com",
   },
-  isAuthenticated: true,
+  isAuthenticated: false,
   token: "",
   setUser: () => {},
   setIsAuthenticated: () => {},

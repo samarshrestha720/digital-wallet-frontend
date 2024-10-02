@@ -8,7 +8,7 @@ export const Home = () => {
   console.log(user);
   return (
     <div>
-      <h1 className="welcome-user">Welcome, {user.name}</h1>
+      <h1 className="welcome-user-heading">Welcome, {user.name}</h1>
       <div className="balanceCardContainer">
         <BalanceCard user={user} />
       </div>
