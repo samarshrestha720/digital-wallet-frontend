@@ -5,7 +5,7 @@ const api = axios.create({
 });
 
 // Define the type for login credentials
-type LoginCredentials = {
+export type LoginCredentials = {
   email: string;
   password: string;
 };

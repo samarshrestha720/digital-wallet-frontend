@@ -1,0 +1,48 @@
+.mainContainer {
+  border: solid;
+  border-radius: 10px;
+  border-color: rgb(246, 238, 228);
+  min-height: 25vh;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 0px 5px 5px rgb(246, 238, 228);
+}
+
+.balance-label {
+  font-weight: bold;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.reload-button {
+  transition: transform 0.5s ease;
+}
+.reload-button.spin {
+  animation: spin 1s linear infinite; /* Spins continuously */
+}
+.reload-button:hover {
+  cursor: pointer;
+}
+
+.balance-value-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.balance-value {
+  font-size: 1.2em;
+}
+
+.hide-unhide-button:hover {
+  border-radius: 15px;
+  background-color: rgb(99, 101, 102);
+  cursor: pointer;
+}

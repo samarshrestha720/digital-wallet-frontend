@@ -3,7 +3,7 @@ import "./Login.css";
 import { CustomTextField } from "../../components/CustomTextField";
 import { Link } from "react-router-dom";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { login } from "../../api/auth";
+import { useAuth } from "../../contexts/AuthContext";
 
 interface IFormInput {
   email: string;
@@ -16,9 +16,10 @@ export const Login = () => {
     control,
     formState: {},
   } = useForm<IFormInput>();
+  const { loginAction } = useAuth();
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     console.log(data);
-    console.log(await login(data));
+    await loginAction(data);
   };
   return (
     <Box
